@@ -1,0 +1,16 @@
+footer .nav-link:not(.active):not(.disabled):not(:hover) {
+    opacity: .5;
+}
+
+
+svg {
+    pointer-events: none;
+}
+
+.text-light svg.icon:not([class*='bg-']) * {
+    fill: #fff;
+}
+
+.text-light svg.icon:not([class*='bg-']) * {
+    fill: #fff;
+}

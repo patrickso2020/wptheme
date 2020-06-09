@@ -1,0 +1,5 @@
+.min-gallery .img { background-image: none;
+filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='css/images/min-gallery-img.png', sizingMethod='image'); }
+
+.slider-holder ul li .slide-cnt { background-image: none;
+filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='css/images/transp.png', sizingMethod='scale'); }
