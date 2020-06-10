@@ -6,7 +6,7 @@ Template Name: Archives
 <?php get_header(); ?>
 
 
-<div class="container">
+<div class="wp-container">
 <div class="page-title">
 <div class="shell">
 <h1><?php the_title();?></h1>
