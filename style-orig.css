@@ -1206,7 +1206,7 @@ width:100px;
     margin-top: 15px;
 }
 #navigation{
-display:none;
+	display:none;
     background: #e60b00;
     position: fixed;
     top: 67px;

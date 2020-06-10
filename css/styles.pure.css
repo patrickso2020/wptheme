@@ -1503,17 +1503,17 @@ input[type=submit].btn-block {
 	}
 	
 	/* REMOVED TO PREVENT LOGIN/SIGNUP COLLAPSE FOR WP-SITE */
-	/* .navbar-expand-lg .navbar-collapse {
+	.navbar-expand-lg .navbar-collapse {
 		display: flex!important;
 		flex-basis: auto
-	} */
+	}
 	.navbar-expand-lg .navbar-toggler {
 		display: none
 	}
 }
 
 /* ADDED TO PROVIDE STYLING WITHOUT COLLAPSE FOR LOGIN/SIGNUP NAV */
-@media (min-width:300px) {
+/* @media (min-width:300px) {
 	.navbar-expand .navbar-collapse,
 	.navbar-expand-xs .navbar-collapse,
 	.navbar-expand-sm .navbar-collapse,
@@ -1522,7 +1522,7 @@ input[type=submit].btn-block {
 		display: flex!important;
 		flex-basis: auto
 	}
-}
+} */
 
 @media (max-width:1199.98px) {
 	.navbar-expand-xl>.container {
