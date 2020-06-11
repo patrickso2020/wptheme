@@ -272,7 +272,7 @@ svg.icon {
 			$(this).find('ul').slideToggle();
 						$(this).nextAll().find('ul').slideUp();
 		});
-		});
+		}); 
 		$('.login-butt').click(function(event) {
 		    event.preventDefault();
 		//	alert('hiil');
@@ -329,6 +329,15 @@ if (scroll >= 200) {
 	document.body.innerHTML = document.body.innerHTML.replace(/rrxx/g, 'challenge=<?php if (isset($_COOKIE['gothamvc'])) { echo($_COOKIE['gothamvc']); } ?>');
 </script>
 
+<script>
+// header navbar reverts upon window resize
+$(window).resize(function() {     
+  if ($(window).width() >= 899) {                
+    $("#navigation.new").css("display", "");     
+  } 
+});
+
+</script>
 
 
 
