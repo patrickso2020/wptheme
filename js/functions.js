@@ -23,19 +23,20 @@ $(document).ready(function() {
 //        wrap: 'circular'
 //    });
     
-    $('.blink').focus(function(){
+    $('.blink').on("focus", function(){
     	if($(this).val() == $(this).attr('title')){
     		$(this).val("");
     	}
     });
     
-    $('.blink').blur(function(){
+    $('.blink').on("blur", function(){
     	if($(this).val()==""){
     		$(this).val($(this).attr('title'));
     	}
     });
     
-    $(window).load(function() {
+    //$(window).load(function() {
+    $(window).on('load', function() {
 		$('.ui-tabs-panel').each(function() {
 	    	var counter=0;
 	    	$(this).find('table:odd').after('<div class="cl">&nbsp;</div>');
@@ -55,7 +56,7 @@ $window.on('scroll', function(){
  // nav.hide();
   prev = scrollTop;
 });
-$('ui-tabs .ui-tabs-anchor').click(function(e){
+$('ui-tabs .ui-tabs-anchor').on("click", function(e){
     e.preventDefault();
     });
  });

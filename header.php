@@ -16,7 +16,7 @@
 <?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
 
 <?php wp_deregister_script('jquery');
-wp_register_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js');
+wp_register_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js');
 wp_enqueue_script('jquery');  
 wp_register_script('bootstrap.js','https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js');
 wp_enqueue_script('bootstrap.js'); 

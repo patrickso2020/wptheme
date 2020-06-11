@@ -258,7 +258,8 @@ svg.icon {
 </script>
 <script type="text/javascript" charset="utf-8">
 	jQuery(function($) {
-		$(window).load(function(){
+		//$(window).load(function(){
+      $(window).on('load', function(){
 		//$('#menu-main-navigation > li > ul').hide();
 //		$('#menu-main-navigation > li').hover(function() {
 //			$(this).find('ul').show();
@@ -266,26 +267,28 @@ svg.icon {
 //			$(this).find('ul').hide();
 //		});
 		$('.menu-item-has-children').each(function(){
-		$(this).click(function() {
+		// $(this).click(function() {
+      $(this).on("click", function() {  
 			//alert('hiil');
 			$(this).prevAll().find('ul').slideUp();
 			$(this).find('ul').slideToggle();
 						$(this).nextAll().find('ul').slideUp();
 		});
 		}); 
-		$('.login-butt').click(function(event) {
+		//$('.login-butt').click(function(event) {
+    $('.login-butt').on("click", function(event) {
 		    event.preventDefault();
 		//	alert('hiil');
 			$('.signin-form').slideToggle();
 			$(this).toggleClass('active');
 			$('.login-butt i').toggleClass('fa-chevron-up');
 		});
-		$('.menu-toogle').click(function() {
+		$('.menu-toogle').on("click", function() {
 		    //alert('hiil');
 			$('#navigation').slideToggle();
 			$('.menu-toogle i').toggleClass('fa-times');
 		});
-		$('img').click(function(s) {
+		$('img').on("click", function(s) {
 		  var containersa = $(".signin-form"); // YOUR CONTAINER SELECTOR
 
   if (!containersa.is(s.target) // if the target of the click isn't the container...
@@ -298,7 +301,8 @@ svg.icon {
 		});
 		// Hide div
 
-	$(document).mouseup(function (e)
+  // $(document).mouseup(function (e)
+  $(document).on("mouseup", function (e)
                     {
   var containers = $(".signin-form"); // YOUR CONTAINER SELECTOR
 
@@ -312,7 +316,7 @@ svg.icon {
 });	
 		
 		});
-		$(window).scroll(function() {    
+		$(window).on("scroll", function() {    
 var scroll = $(window).scrollTop();
 var headers = $('.header').height();
  //console.log(scroll);
@@ -331,7 +335,7 @@ if (scroll >= 200) {
 
 <script>
 // header navbar reverts upon window resize
-$(window).resize(function() {     
+$(window).on("resize", function() {     
   if ($(window).width() >= 899) {                
     $("#navigation.new").css("display", "");     
   } 
