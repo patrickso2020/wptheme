@@ -1,8 +1,8 @@
 === Gotham Volleyball New ===
-Contributors: John Wetsell
+Contributors: John Wetsell & Patrick So
 Requires at least: WordPress 4.1
 Tested up to: WordPress 5.0-trunk
-Version: 2.2
+Version: 2.5
 Tags: blog, two-columns, right-sidebar, post-formats, rtl-language-support
 
 == Description ==
