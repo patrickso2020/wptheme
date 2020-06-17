@@ -47,14 +47,14 @@ svg.icon {
             <h5>Contact</h5>
             <ul class="list-unstyled">
               <!-- <li class="mb-3 d-flex">
-                <img class="icon" src="/registration/assets/img/icons/theme/map/marker-1.svg" alt="marker-1 icon" data-inject-svg />
+                <img class="icon" src="<?php bloginfo('stylesheet_directory'); ?>/images/icons/theme/map/marker-1.svg" alt="marker-1 icon" data-inject-svg />
                 <div class="ml-3">
                   <span>put the address here
                     <br />New York, NY</span>
                 </div>
               </li> -->
               <li class="mb-3 d-flex">
-                <!-- <img class="icon" src="/registration/assets/img/icons/theme/communication/call-1.svg" alt="call-1 icon" data-inject-svg /> -->
+                <!-- <img class="icon" src="<?php bloginfo('stylesheet_directory'); ?>/images/icons/theme/communication/call-1.svg" alt="call-1 icon" data-inject-svg /> -->
                 <img class="icon undefined" src="<?php bloginfo('stylesheet_directory'); ?>/images/icons/social/facebook.svg" alt="facebook social icon" data-inject-svg />
                 <div class="ml-3">
                     <a href="https://www.facebook.com/GothamVolleyball/">Find us on Facebook</a>
@@ -96,7 +96,7 @@ svg.icon {
           echo '<div class="d-none alert alert-danger" role="alert" data-error-message>Please fill all fields correctly.</div>';
           echo '<div data-recaptcha data-sitekey="6Lf9CXsUAAAAAKA3ij7OyAUjDzG9tl2tPZ15F3XO" data-size="invisible" data-badge="bottomleft"></div>';
           echo '<button type="submit" class="btn btn-primary btn-loading btn-block" data-loading-text="Sending">';
-          echo '<img class="icon" src="/registration/assets/img/icons/theme/code/loading.svg" alt="loading icon" data-inject-svg />';
+          echo '<img class="icon" src="/wp-content/themes/gotham-volleyball/images/icons/theme/code/loading.svg" alt="loading icon" data-inject-svg />';
           echo '<span>Subscribe</span></button>';
           echo '</div></div>';
           echo '</form><script type="text/javascript" src="https://js.createsend1.com/javascript/copypastesubscribeformlogic.js"></script>';
@@ -127,7 +127,7 @@ svg.icon {
                   <div data-recaptcha data-sitekey="6Lf9CXsUAAAAAKA3ij7OyAUjDzG9tl2tPZ15F3XO" data-size="invisible" data-badge="bottomleft">
                   </div>
                   <button type="submit" class="btn btn-primary btn-loading btn-block" data-loading-text="Sending">
-                  <img class="icon" src="/registration/assets/img/icons/theme/code/loading.svg" alt="loading icon" data-inject-svg />
+                  <img class="icon" src="<?php bloginfo('stylesheet_directory');?>/images/icons/theme/code/loading.svg" alt="loading icon" data-inject-svg />
                   <span>Subscribe</span>
                   </button>
               </div>
@@ -181,59 +181,61 @@ svg.icon {
       </div>
     </footer>
     <a href="#" class="btn back-to-top btn-primary btn-round" data-smooth-scroll data-aos="fade-up" data-aos-offset="2000" data-aos-mirror="true" data-aos-once="false">
-      <img class="icon" src="/registration/assets/img/icons/theme/navigation/arrow-up.svg" alt="arrow-up icon" data-inject-svg />
+      <img class="icon" src="<?php bloginfo('stylesheet_directory');?>/images/icons/theme/navigation/arrow-up.svg" alt="arrow-up icon" data-inject-svg />
     </a>
     <!-- Required vendor scripts (Do not remove) -->
-    <!-- <script type="text/javascript" src="/registration/assets/js/jquery.min.js"></script> -->
-    <script type="text/javascript" src="/registration/assets/js/popper.min.js"></script>
-    <script type="text/javascript" src="/registration/assets/js/bootstrap.js"></script>
+    <!-- <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/additional/jquery.min.js"></script> -->
+    
+
+    <!-- <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/additional/popper.min.js"></script> -->
+    <!-- <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/bootstrap.js"></script> -->
 
     <!-- Optional Vendor Scripts (Remove the plugin script here and comment initializer script out of index.js if site does not use that feature) -->
 
-    <!-- AOS (Animate On Scroll - animates elements into view while scrolling down) -->
-    <script type="text/javascript" src="/registration/assets/js/aos.js"></script>
+    <!-- AOS (Animate On Scroll - animates elements into view while scrolling down-- allows for up-arrow in footer) -->
+    <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/additional/aos.js"></script>
     <!-- Clipboard (copies content from browser into OS clipboard) -->
-    <script type="text/javascript" src="/registration/assets/js/clipboard.js"></script>
+    <!-- <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/additional/clipboard.js"></script> -->
     <!-- Fancybox (handles image and video lightbox and galleries) -->
-    <script type="text/javascript" src="/registration/assets/js/jquery.fancybox.min.js"></script>
+    <!-- <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/additional/jquery.fancybox.min.js"></script> -->
     <!-- Flatpickr (calendar/date/time picker UI) -->
-    <script type="text/javascript" src="/registration/assets/js/flatpickr.min.js"></script>
+    <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/additional/flatpickr.min.js"></script>
     <!-- Flickity (handles touch enabled carousels and sliders) -->
-    <script type="text/javascript" src="/registration/assets/js/flickity.pkgd.min.js"></script>
+    <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/flickity.pkgd.min.js"></script>
     <!-- Ion rangeSlider (flexible and pretty range slider elements) -->
-    <script type="text/javascript" src="/registration/assets/js/ion.rangeSlider.min.js"></script>
+    <!-- <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/additional/ion.rangeSlider.min.js"></script> -->
     <!-- Isotope (masonry layouts and filtering) -->
-    <script type="text/javascript" src="/registration/assets/js/isotope.pkgd.min.js"></script>
+    <!-- <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/additional/isotope.pkgd.min.js"></script> -->
     <!-- jarallax (parallax effect and video backgrounds) -->
-    <script type="text/javascript" src="/registration/assets/js/jarallax.min.js"></script>
-    <script type="text/javascript" src="/registration/assets/js/jarallax-video.min.js"></script>
-    <script type="text/javascript" src="/registration/assets/js/jarallax-element.min.js"></script>
+    <!-- <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/additional/jarallax.min.js"></script>
+    <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/additional/jarallax-video.min.js"></script>
+    <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/additional/jarallax-element.min.js"></script> -->
     <!-- jQuery Countdown (displays countdown text to a specified date) -->
-    <script type="text/javascript" src="/registration/assets/js/jquery.countdown.min.js"></script>
+    <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/additional/jquery.countdown.min.js"></script>
     <!-- jQuery smartWizard facilitates steppable wizard content -->
-    <script type="text/javascript" src="/registration/assets/js/jquery.smartWizard.min.js"></script>
+    <!-- <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/additional/jquery.smartWizard.min.js"></script> -->
     <!-- Plyr (unified player for Video, Audio, Vimeo and Youtube) -->
-    <script type="text/javascript" src="/registration/assets/js/plyr.polyfilled.min.js"></script>
+    <!-- <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/additional/plyr.polyfilled.min.js"></script> -->
     <!-- Prism (displays formatted code boxes) -->
-    <script type="text/javascript" src="/registration/assets/js/prism.js"></script>
-    <!-- ScrollMonitor (manages events for elements scrolling in and out of view) -->
-    <script type="text/javascript" src="/registration/assets/js/scrollMonitor.js"></script>
+    <!-- <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/additional/prism.js"></script> -->
+    <!-- ScrollMonitor (manages events for elements scrolling in and out of view) MAKES CAPTCHA WINDOW APPEAR -->
+    <!-- <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/additional/scrollMonitor.js"></script> -->
     <!-- Smooth scroll (animation to links in-page)-->
-    <script type="text/javascript" src="/registration/assets/js/smooth-scroll.polyfills.min.js"></script>
+    <!-- <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/additional/smooth-scroll.polyfills.min.js"></script> -->
     <!-- SVGInjector (replaces img tags with SVG code to allow easy inclusion of SVGs with the benefit of inheriting colors and styles)-->
-    <script type="text/javascript" src="/registration/assets/js/svg-injector.umd.production.js"></script>
+    <!-- <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/additional/svg-injector.umd.production.js"></script> -->
     <!-- TwitterFetcher (displays a feed of tweets from a specified account)-->
-    <script type="text/javascript" src="/registration/assets/js/twitterFetcher_min.js"></script>
+    <!-- <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/additional/twitterFetcher_min.js"></script> -->
     <!-- Typed text (animated typing effect)-->
-    <script type="text/javascript" src="/registration/assets/js/typed.min.js"></script>
-    <!-- Required theme scripts (Do not remove) -->
-    <script type="text/javascript" src="/registration/assets/js/theme.js"></script>
+    <!-- <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/additional/typed.min.js"></script> -->
+    <!-- Required theme scripts (Do not remove) allows for up-arrow from footer-->
+    <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/additional/theme.js"></script>
     <!-- Removes page load animation when window is finished loading -->
     <script type="text/javascript">
       window.addEventListener("load", function () {    document.querySelector('body').classList.add('loaded');  });
     </script>
-    <script type="text/javascript" src="/node_modules/jquery-validation/dist/jquery.validate.min.js"></script>
-    <script type="text/javascript" src="/node_modules/jquery-validation/dist/additional-methods.min.js"></script>
+    <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/additional/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/additional/additional-methods.min.js"></script>
     <script>
         $("#subForm").validate({
             rules: {

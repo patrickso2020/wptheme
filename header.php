@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title><?php wp_title('&laquo;', true, 'right'); ?> <?php bloginfo('name'); ?></title>
 
-<script src="/cdn-cgi/apps/head/9PMV6fPAQ1U8oLgUfrmxlvrpKpE.js"></script><script src="/cdn-cgi/apps/head/9PMV6fPAQ1U8oLgUfrmxlvrpKpE.js"></script>
+<!-- <script src="/cdn-cgi/apps/head/9PMV6fPAQ1U8oLgUfrmxlvrpKpE.js"></script><script src="/cdn-cgi/apps/head/9PMV6fPAQ1U8oLgUfrmxlvrpKpE.js"></script> -->
 <link rel='stylesheet' id='sb-font-awesome-css' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' type='text/css' media='all' />
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>?v202001" type="text/css" media="screen" />
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/styles.pure.css" type="text/css" media="screen" />
@@ -18,36 +18,38 @@
 <?php wp_deregister_script('jquery');
 wp_register_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js');
 wp_enqueue_script('jquery');  
+wp_register_script('popper.js', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js');
+wp_enqueue_script('popper.js'); 
 wp_register_script('bootstrap.js','https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js');
 wp_enqueue_script('bootstrap.js'); 
 ?>
 
 <!-- Latest compiled and minified JavaScript -->
-<script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/bootstrap.min.js"></script>
+<!-- <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/bootstrap.min.js"></script> -->
 
 <?php wp_head(); ?>
 
 <!-- Google Auto Ads -->
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <script>
 (adsbygoogle = window.adsbygoogle || []).push({
 google_ad_client: "ca-pub-3127250149672145",
 enable_page_level_ads: true
 });
-</script>
+</script> -->
 
 <script src="<?php bloginfo('stylesheet_directory'); ?>/js/flickity.pkgd.min.js" type="text/javascript" charset="utf-8"></script>
-<script src="<?php bloginfo('stylesheet_directory'); ?>/js/fancybox/jquery.fancybox-1.3.4.pack.js" type="text/javascript" charset="utf-8"></script>
-<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/js/fancybox/jquery.fancybox-1.3.4.css" type="text/css" media="screen" title="no title" charset="utf-8">
+<!-- <script src="<?php bloginfo('stylesheet_directory'); ?>/js/fancybox/jquery.fancybox-1.3.4.pack.js" type="text/javascript" charset="utf-8"></script> -->
+<!-- <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/js/fancybox/jquery.fancybox-1.3.4.css" type="text/css" media="screen" title="no title" charset="utf-8"> -->
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/flickity.min.css" type="text/css" media="screen" title="no title" charset="utf-8">
 
 <script src="<?php bloginfo('stylesheet_directory'); ?>/js/functions.js?v2" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript" charset="utf-8">
-(function($){
-$(document).ready(function() {
-$('a[rel="fancybox"]').fancybox();
-});
-})(jQuery)
+// (function($){
+// $(document).ready(function() {
+// $('a[rel="fancybox"]').fancybox();
+// });
+// })(jQuery)
 </script>
 
 <style>
