@@ -75,13 +75,13 @@ svg.icon {
 
 <!-- PHP VERSION -->
           <?php
-        if ($page_title === 'sign_up') {
-            echo '<div class="col-lg-5 col-xl-4 mt-3 mt-lg-0">';
-            echo '<h5>Subscribe</h5>';
-            echo '<p>Subscribe above in the sign-up form to receive our newsletter for the latest announcments, news, and updates, sent straight to your inbox.</p>';
-            echo '<small class="text-muted form-text"><a href="https://www.gothamvolleyball.org/policydocuments/">Gotham Bylaws and Policy Documents</a></small>';
-            echo '</div>';
-        } else {
+        // if ($page_title === 'sign_up') {
+        //     echo '<div class="col-lg-5 col-xl-4 mt-3 mt-lg-0">';
+        //     echo '<h5>Subscribe</h5>';
+        //     echo '<p>Subscribe above in the sign-up form to receive our newsletter for the latest announcments, news, and updates, sent straight to your inbox.</p>';
+        //     echo '<small class="text-muted form-text"><a href="https://www.gothamvolleyball.org/policydocuments/">Gotham Bylaws and Policy Documents</a></small>';
+        //     echo '</div>';
+        // } else {
           echo '<div class="col-lg-5 col-xl-4 mt-3 mt-lg-0">';
           echo '<h5>Subscribe</h5>';
           echo '<p>The latest announcments, news, and updates, sent straight to your inbox.</p>';
@@ -94,15 +94,15 @@ svg.icon {
           echo '<div class="col-12">';
           echo '<div class="d-none alert alert-success" role="alert" data-success-message>Thanks, you\'re all set!</div>';
           echo '<div class="d-none alert alert-danger" role="alert" data-error-message>Please fill all fields correctly.</div>';
-          echo '<div data-recaptcha data-sitekey="6Lf9CXsUAAAAAKA3ij7OyAUjDzG9tl2tPZ15F3XO" data-size="invisible" data-badge="bottomleft"></div>';
+          //echo '<div data-recaptcha data-sitekey="6Lf9CXsUAAAAAKA3ij7OyAUjDzG9tl2tPZ15F3XO" data-size="invisible" data-badge="bottomleft"></div>';
           echo '<button type="submit" class="btn btn-primary btn-loading btn-block" data-loading-text="Sending">';
-          echo '<img class="icon" src="/wp-content/themes/gotham-volleyball/images/icons/theme/code/loading.svg" alt="loading icon" data-inject-svg />';
+          echo '<img class="icon" src="';?><?php bloginfo('stylesheet_directory');?><?php echo'/images/icons/theme/code/loading.svg" alt="loading icon" data-inject-svg />';
           echo '<span>Subscribe</span></button>';
           echo '</div></div>';
           echo '</form><script type="text/javascript" src="https://js.createsend1.com/javascript/copypastesubscribeformlogic.js"></script>';
           echo '<small class="text-muted form-text"><a href="https://www.gothamvolleyball.org/policydocuments/">Gotham Bylaws and Policy Documents</a></small>';
           echo '</div>';
-        }
+        // }
           ?>
 
 <!-- HTML VERSION -->
@@ -203,9 +203,9 @@ svg.icon {
     <!-- Flickity (handles touch enabled carousels and sliders) -->
     <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/flickity.pkgd.min.js"></script>
     <!-- Ion rangeSlider (flexible and pretty range slider elements) -->
-    <!-- <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/additional/ion.rangeSlider.min.js"></script> -->
+    <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/additional/ion.rangeSlider.min.js"></script>
     <!-- Isotope (masonry layouts and filtering) -->
-    <!-- <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/additional/isotope.pkgd.min.js"></script> -->
+    <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/additional/isotope.pkgd.min.js"></script>
     <!-- jarallax (parallax effect and video backgrounds) -->
     <!-- <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/additional/jarallax.min.js"></script>
     <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/additional/jarallax-video.min.js"></script>
@@ -219,7 +219,7 @@ svg.icon {
     <!-- Prism (displays formatted code boxes) -->
     <!-- <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/additional/prism.js"></script> -->
     <!-- ScrollMonitor (manages events for elements scrolling in and out of view) MAKES CAPTCHA WINDOW APPEAR -->
-    <!-- <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/additional/scrollMonitor.js"></script> -->
+    <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/additional/scrollMonitor.js"></script>
     <!-- Smooth scroll (animation to links in-page)-->
     <!-- <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/additional/smooth-scroll.polyfills.min.js"></script> -->
     <!-- SVGInjector (replaces img tags with SVG code to allow easy inclusion of SVGs with the benefit of inheriting colors and styles)-->
