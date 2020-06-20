@@ -1372,7 +1372,7 @@ input[type=submit].btn-block {
 	display: inline-block;
 	padding-top: .3125rem;
 	padding-bottom: .3125rem;
-	margin-right: 1.5rem;
+	/* margin-right: 1.5rem; */
 	font-size: 1.25rem;
 	line-height: inherit;
 	white-space: nowrap
@@ -1473,7 +1473,7 @@ input[type=submit].btn-block {
 		display: none
 	}
 }
-
+ 
 @media (max-width:991.98px) {
 	.navbar-expand-lg>.container {
 		padding-right: 0;
@@ -1556,6 +1556,10 @@ input[type=submit].btn-block {
 	.navbar-expand-xl .navbar-toggler {
 		display: none
 	}
+}
+/* from new styling */
+.navbar[data-sticky="top"].scrolled.navbar-light, .navbar.navbar-light {
+    background-color: #eff4f7 !important;
 }
 
 .navbar-expand {
@@ -3186,6 +3190,7 @@ img.bg-image {
 	transform: rotateZ(180deg) translateX(-4px)
 }
 
+
 @media (max-width:991.98px) {
 	.navbar-expand-lg .dropdown-menu,
 	.navbar-expand-lg [data-dropdown-content] {
@@ -3199,6 +3204,24 @@ img.bg-image {
 	.navbar-expand-lg .dropdown-menu .dropdown .dropdown-toggle .icon {
 		transform: rotateZ(270deg)
 	}
+	.date-style {
+        font-style: oblique;
+    }
+    /* div.navbar-gotham-logo {
+        max-width: 20.5%;
+    }  */
+	/* a.navbar-brand {
+        max-width: 55%;
+    } */
+	
+	img#logo_gothamvolleyball {
+		display: block;
+		max-width: 55%;
+    }
+    /* #avatar-pic {
+        width: 3.5rem;
+        height: 3.5rem;
+    } */
 }
 
 [data-toggle=dropdown-grid][data-hover=true]:hover:before,
@@ -3315,13 +3338,25 @@ img {
 		max-height: 100vh;
 		overflow-y: scroll
 	}
+	div.wplinks {
+		width: 100%;
+	}
+
 }
 
 @media (max-width:991.98px) {
 	.nav-item.dropdown .col-auto {
 		width: 100%;
 		padding-left: 0;
-		padding-right: 0
+		padding-right: 0;
+	}
+	div.menu-items {
+		padding: 17px 0px;
+	}
+	div.wplinks {
+		display: block;
+		width: auto;
+		margin-left: -90px;
 	}
 }
 
@@ -6033,6 +6068,9 @@ div.date-row {
 		flex-wrap: nowrap;
 		overflow: scroll;
 		text-align: center
+	}
+	.navbar-nav .nav-item .nav-link {
+		font-size: .925rem;
 	}
 }
 

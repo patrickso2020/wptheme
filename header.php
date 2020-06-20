@@ -54,13 +54,14 @@ enable_page_level_ads: true
 
 <style>
 #navigation {
-	background: #f8f9fa;
+	background: #eff4f7;
 }
-
 #navbar.header {
 	text-align: left;
 }
-
+.navbar-collapse.col {
+	padding-left: .75rem;
+}
 /* wp-navbar styling */
 @media (min-width: 300px) {
 	wp-navbar,
@@ -69,48 +70,49 @@ enable_page_level_ads: true
 		flex-basis: auto;
 	}
 }
+.navbar.wplinks {
+	border-bottom: none;
+	padding-left: .75rem;
+}
 .navbar-expand-lg .navbar-nav,
 .navbar-expand-lg .wp-navbar {
 	flex-direction: row
 }
-
 #wp-main-nav.row {
 	flex-grow: 1;
 	padding-left: 12px;
 }
-
 .wp-navbar {
 	flex-basis: 100%;
 	flex-grow: 1;
 	align-items: center;
-
 	display: flex;
 	flex-basis: auto;
 	justify-content: left;
 }
-
 </style>
 </head>
 
 <body <?php body_class(); ?>>
 
 <div id="navbar" class="header sticky"> 
-	<div class="navbar navbar-expand-lg navbar-light bg-light" style="display: flex;">
+	<div class="navbar navbar-expand-lg justify-content-between navbar-light navbar-custom" style="display: flex;">
 		<div class="container">
+			<div class="flex-fill px-0 d-flex justify-content-between">
+				<!-- FROM REGISTRATION -->
+					<a class="navbar-brand mr-0 fade-page logo-link" href="/"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/logo.png" alt="Gotham Volleyball" id="logo_gothamvolleyball"></a>
+				<!-- REMOVED NAVBAR HAMBURGER NAV -->
+				<!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+				</button> -->
+				<!-- <div class="top-banner-ad">
+				</div> -->
 
-			<!-- FROM REGISTRATION -->
-			<a class="navbar-brand fade-page" href="/"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/logo.png" width="211" alt="Gotham Volleyball"></a>
-			
-			<!-- REMOVED NAVBAR HAMBURGER NAV -->
-			<!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-			</button> -->
-		<div class="top-banner-ad">
-		</div>
-
-			<div class="row" id="wp-main-nav">
+				<div class=" navbar-collapse col px-0 px-lg-2 flex-fill wplinks">
+					<div class="py-2 py-lg-0 menu-items">
+				<!-- <div class="row" id="wp-main-nav"> -->
 					<!-- <div class="collapse navbar-collapse " id="navbarNavDropdown"> -->
-					<div class="wp-navbar " id="navbarNavDropdown" > 
+					<!-- <div class="wp-navbar " id="navbarNavDropdown" >  -->
 						<ul class="navbar-nav">
 								<!-- <li class="nav-item active">
 								<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
@@ -189,39 +191,31 @@ enable_page_level_ads: true
 								endif;
 								?>
 
-								<!-- <li class="nav-item dropdown">
-								<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-								Dropdown link
-								</a>
-								<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-								<a class="dropdown-item" href="#">Action</a>
-								<a class="dropdown-item" href="#">Another action</a>
-								<a class="dropdown-item" href="#">Something else here</a>
-								</div>
-								</li> -->
 						</ul>
 					</div> <!--//collapse navbar  or wp-navbar-->
+				  </div> <!-- // flex-fill -->
 								<?php
 								if (isset($_SESSION['authenticated']) && ($_SESSION['authenticated'] == 'yes' || $_SESSION['authenticated'])) :
 								?>
 
-					<div>
-						<div class="d-flex align-items-center flex-wrap">
-							<a href="/registration/settings.php" alt="edit address and update password">
-								<img src="/registration/images/default_avatar.jpg" alt="edit address and update password" class="avatar avatar-lg m-1">
-							</a>
-						</div> 
-						<div class="profile-link">
-							<small><a href="/registration/settings.php">profile</a></small>
-						</div>
-						<div class="logout_header">
-							<a href="/registration/logout.php">logout</a>
-						</div>
+						<div id="avatarMenu">
+							<div class="d-flex align-items-center flex-wrap">
+								<ul class="navbar-nav">
+									<li class="nav-item dropdown ">
+										<a href="#" id="navbarDropdownProfileSettings" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true"><img src="/registration/images/default_avatar.jpg" alt="edit address and update password" id="avatar-pic" class="avatar avatar-md m-1"></a>
+										<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfileSettings">
+										<a class="dropdown-item" href="/registration/settings.php">Profile</a>
+										<a class="dropdown-item" href="/registration/logout.php">Logout</a>
+										</div>
+									</li>
+								</ul>
+							</div>
+						
 							<?php
 							endif;
 							?>
 
-					</div> <!--//noname -->
+						</div> <!-- // avatarMenu -->
 					
 						<!-- END REGISTRATION -->
 						<?php wp_nav_menu(array('theme_location' => 'header-menu', 'after' => '<span> &#124;&nbsp;</span>', 'container' => '')); ?>
