@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<div class="container">
+<div class="flickity-container">
 
 	<?php query_posts('post_type=slides&showposts=-1'); ?>
 	<?php if (have_posts()) : ?>

@@ -4183,7 +4183,7 @@ https://flickity.metafizzy.co
 	position: relative;
 	height: 100%
 }
-@media (max-width: 900px) {
+/* @media (max-width: 900px) {
 	.flickity-viewport {
 		padding-top: 30px;
 	}
@@ -4192,7 +4192,7 @@ https://flickity.metafizzy.co
 	.flickity-viewport {
 		padding-top: 10px;
 	}
-}
+} */
 
 .flickity-slider {
 	position: absolute;
@@ -5002,9 +5002,7 @@ body {
 	color: #ad0662
 }
 /* additional padding for new header (from registration) */
-div.shell {
-	/* padding-top: 35px; */
-}
+
 .page-title {
 	padding: 50px 0px 35px 0px;
 }
