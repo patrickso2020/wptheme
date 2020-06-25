@@ -221,7 +221,7 @@ div.dropdown-menu.show {
 								<a href="#" id="navbarDropdownProfileSettings" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
 								<img src="<?php bloginfo('stylesheet_directory'); ?>/images/icons/social/default_avatar.jpg" alt="edit address and update password" id="avatar-pic" class="avatar avatar-md m-1"></a>
 						<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfileSettings">
-								<a class="dropdown-item short-text" href="/registration/settings.php">My Account</a>
+								<a class="dropdown-item short-text" href="/registration/personal.php">My Account</a>
 							<div class="dropdown-divider header-menu">								
 							</div>
 								<a class="dropdown-item" href="/registration/settings.php">Profile</a>

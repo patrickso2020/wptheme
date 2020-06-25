@@ -4183,6 +4183,16 @@ https://flickity.metafizzy.co
 	position: relative;
 	height: 100%
 }
+@media (max-width: 900px) {
+	.flickity-viewport {
+		padding-top: 30px;
+	}
+}
+@media (min-width: 991.98px) {
+	.flickity-viewport {
+		padding-top: 10px;
+	}
+}
 
 .flickity-slider {
 	position: absolute;
@@ -4993,10 +5003,10 @@ body {
 }
 /* additional padding for new header (from registration) */
 div.shell {
-	padding-top: 35px;
+	/* padding-top: 35px; */
 }
 .page-title {
-	padding: 15px 0px 35px 0px;
+	padding: 50px 0px 35px 0px;
 }
 
 div.size32 {
