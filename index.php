@@ -4,7 +4,7 @@
 	<?php query_posts('post_type=slides&showposts=-1'); ?>
 	<?php if (have_posts()) : ?>
 		<div class="slider" id="mycarousel">
-			<div class="slider-holder">
+			<div class="slider-holder home-page">
 				<ul class="carousel"
   data-flickity='{ "cellSelector": ".carousel-cell" }'>
 					<?php while (have_posts()) : the_post(); ?>

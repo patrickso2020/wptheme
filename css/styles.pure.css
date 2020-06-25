@@ -4183,16 +4183,22 @@ https://flickity.metafizzy.co
 	position: relative;
 	height: 100%
 }
-/* @media (max-width: 900px) {
-	.flickity-viewport {
-		padding-top: 30px;
+@media (max-width: 900px) {
+	.flickity-container {
+		padding-top: 2rem;
+	}
+	.slider-holder.home-page {
+		margin-bottom: -1.15rem;
 	}
 }
 @media (min-width: 991.98px) {
-	.flickity-viewport {
-		padding-top: 10px;
+	.flickity-container {
+		padding-top: 2rem;
 	}
-} */
+	.slider-holder.home-page {
+		margin-bottom: -.25rem;
+	}
+}
 
 .flickity-slider {
 	position: absolute;
