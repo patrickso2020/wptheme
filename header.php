@@ -121,140 +121,137 @@ div.dropdown-menu.show {
 	<div class="navbar navbar-expand-lg justify-content-between navbar-light navbar-custom" style="display: flex;">
 		<div class="container">
 			<div class="flex-fill px-0 d-flex justify-content-between">
-				<!-- FROM REGISTRATION -->
+							<!-- FROM REGISTRATION -->
 					<a class="navbar-brand mr-0 fade-page logo-link" href="/"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/logo.png" alt="Gotham Volleyball" id="logo_gothamvolleyball"></a>
-				<!-- REMOVED NAVBAR HAMBURGER NAV -->
-				<!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-				</button> -->
-				<!-- <div class="top-banner-ad">
-				</div> -->
+							<!-- REMOVED NAVBAR HAMBURGER NAV -->
+							<!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+							</button> -->
 
 				<div class=" navbar-collapse col px-0 px-lg-2 flex-fill wplinks">
 					<div class="py-2 py-lg-0 menu-items">
-				<!-- <div class="row" id="wp-main-nav"> -->
-					<!-- <div class="collapse navbar-collapse " id="navbarNavDropdown"> -->
-					<!-- <div class="wp-navbar " id="navbarNavDropdown" >  -->
+							<!-- <div class="row" id="wp-main-nav"> -->
+							<!-- <div class="collapse navbar-collapse " id="navbarNavDropdown"> -->
+							<!-- <div class="wp-navbar " id="navbarNavDropdown" >  -->
 						<ul class="navbar-nav">
-								<!-- <li class="nav-item active">
-								<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-								</li> -->
-								<?php
-								//$_SESSION['authenticated'] = 'yes';  // forced authentication
-								if (isset($_SESSION['authenticated']) && ($_SESSION['authenticated'] == 'yes' || $_SESSION['authenticated'])) :
-								$nav = array('My Account' => 'personal.php');
-								// 'Scores' => 'scores.php',
-								// 'Friendlies' => 'friendly.php', 'Division' => 'historydivision.php',
-								// 'Admin' => 'admin.php', 'Tournament Admin'=>'tournament_admin/',
-								// 'Reports' => 'reports.php', 'Schedule' => 'schedule.php', 'Enter Scores' => 'admin_scores.php', 'Users' => 'admin-users.php',
-								// 'Team' => 'team1.php', 'Power'=>'powerclass1.php', 'Season' => 'season.php');
-								$last = end($nav);
-								$board_pages = array('Reports', 'Schedule', 'Enter Scores', 'Users', 'Tournament Admin');
-								$admin_pages = array('Team', 'Power',  'Admin', 'Season');
-								$history_dropdown_pages = array('Division', 'Power');
+									<!-- <li class="nav-item active">
+									<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+									</li> -->
+									<?php
+									//$_SESSION['authenticated'] = 'yes';  // forced authentication
+									if (isset($_SESSION['authenticated']) && ($_SESSION['authenticated'] == 'yes' || $_SESSION['authenticated'])) :
+									$nav = array('My Account' => 'personal.php');
+									// 'Scores' => 'scores.php',
+									// 'Friendlies' => 'friendly.php', 'Division' => 'historydivision.php',
+									// 'Admin' => 'admin.php', 'Tournament Admin'=>'tournament_admin/',
+									// 'Reports' => 'reports.php', 'Schedule' => 'schedule.php', 'Enter Scores' => 'admin_scores.php', 'Users' => 'admin-users.php',
+									// 'Team' => 'team1.php', 'Power'=>'powerclass1.php', 'Season' => 'season.php');
+									$last = end($nav);
+									$board_pages = array('Reports', 'Schedule', 'Enter Scores', 'Users', 'Tournament Admin');
+									$admin_pages = array('Team', 'Power',  'Admin', 'Season');
+									$history_dropdown_pages = array('Division', 'Power');
 
-								$count = 1;
-								$admin_menu_links = '';
-								foreach ($nav as $title => $page) {
-								$active_class = '';
-								if (isset($current_page) && $current_page == $title) {
-								$active_class = ' active';
-								}
-								if(strcmp($_SESSION['TYPE'],"admin") != 0) {
-								if (in_array($title, $admin_pages)) continue;
-								if (strcmp($_SESSION['TYPE'],"board member") != 0) {
-								if (in_array($title, $board_pages)) continue;
-								}
-								}
-								if (in_array($title, $admin_pages) || in_array($title, $board_pages)) {
-								$admin_menu_links .= '<a href="/registration/'.$page.'" class="dropdown-item fade-page'.$active_class.'">'.$title.'</a>';
-								} elseif (in_array($title, $history_dropdown_pages)) {
-								if (isset($current_page) && $current_page == 'History') {
-								$active_class = ' active';
-								}
-						echo '<li class="nav-item dropdown'.$active_class.'">
+									$count = 1;
+									$admin_menu_links = '';
+									foreach ($nav as $title => $page) {
+									$active_class = '';
+									if (isset($current_page) && $current_page == $title) {
+									$active_class = ' active';
+									}
+									if(strcmp($_SESSION['TYPE'],"admin") != 0) {
+									if (in_array($title, $admin_pages)) continue;
+									if (strcmp($_SESSION['TYPE'],"board member") != 0) {
+									if (in_array($title, $board_pages)) continue;
+									}
+									}
+									if (in_array($title, $admin_pages) || in_array($title, $board_pages)) {
+									$admin_menu_links .= '<a href="/registration/'.$page.'" class="dropdown-item fade-page'.$active_class.'">'.$title.'</a>';
+									} elseif (in_array($title, $history_dropdown_pages)) {
+									if (isset($current_page) && $current_page == 'History') {
+									$active_class = ' active';
+									}
+									echo '<li class="nav-item dropdown'.$active_class.'">
 									<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 									History
 									</a>
-							<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-								<a class="dropdown-item" href="/registration/historydivision.php">Division</a>
-								<a class="dropdown-item" href="/registration/historypower.php">Power</a>
-							</div>
-						</li>';
-								} else {
-						echo '<li class="nav-item full-text'.$active_class.'"><a href="/registration/'.$page.'" class="nav-link">'.$title.'</a></li>';
-								}
+								<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+									<a class="dropdown-item" href="/registration/historydivision.php">Division</a>
+									<a class="dropdown-item" href="/registration/historypower.php">Power</a>
+								</div>
+									</li>';
+									} else {
+									echo '<li class="nav-item full-text'.$active_class.'"><a href="/registration/'.$page.'" class="nav-link">'.$title.'</a></li>';
+									}
+									$count++;
+									}
+									$active_class = '';
+									if (isset($current_page) && $current_page == 'Admin Pages') {
+									$active_class = ' active';
+									}
+									// print out the admin menu
 
-								$count++;
-								}
-
-								$active_class = '';
-								if (isset($current_page) && $current_page == 'Admin Pages') {
-								$active_class = ' active';
-								}
-								// print out the admin menu
-						
-
-								unset($nav);
-								unset($board_pages);
-								unset($admin_pages);
-								else:
-								$active_class_signup = '';
-								$active_class_login = ' active';
-								if (isset($current_page) && $current_page == 'Sign Up') {
-								$active_class_signup = ' active';
-								$active_class_login = '';
-								}
-						echo '<li class="nav-item"><a href="/registration/login.php#login" class="nav-link ">Login</a></li>';
-						echo '<li class="nav-item"><a href="/registration/signup.php" class="nav-link">Sign Up</a></li>';
-								// echo '<li class="nav-item"><a href="https://www.gothamvolleyball.org/about/" class="nav-link">About Us</a></li>';
-								endif;
-								?>
+									unset($nav);
+									unset($board_pages);
+									unset($admin_pages);
+									else:
+									$active_class_signup = '';
+									$active_class_login = ' active';
+									if (isset($current_page) && $current_page == 'Sign Up') {
+									$active_class_signup = ' active';
+									$active_class_login = '';
+									}
+									echo '<li class="nav-item"><a href="/registration/login.php#login" class="nav-link ">Login</a></li>';
+									echo '<li class="nav-item"><a href="/registration/signup.php" class="nav-link">Sign Up</a></li>';
+									// echo '<li class="nav-item"><a href="https://www.gothamvolleyball.org/about/" class="nav-link">About Us</a></li>';
+									endif;
+									?>
 
 						</ul>
-						</div>
-					</div> <!--//collapse navbar  or wp-navbar-->
-				  </div> <!-- // flex-fill -->
-								<?php
-								if (isset($_SESSION['authenticated']) && ($_SESSION['authenticated'] == 'yes' || $_SESSION['authenticated'])) :
-								?>
+					</div> <!-- // menu-items -->
+				</div> <!--// collapse-navbar wplinks -->
+			</div> 	<!-- // flex-fill -->
+							<?php
+							if (isset($_SESSION['authenticated']) && ($_SESSION['authenticated'] == 'yes' || $_SESSION['authenticated'])) :
+							?>
 
-						<div id="avatarMenu">
-							<div class="d-flex align-items-center flex-wrap">
+				<div id="avatarMenu">
+					<div class="d-flex align-items-center flex-wrap">
 								<ul class="navbar-nav">
-									<li class="nav-item dropdown ">
-										<a href="#" id="navbarDropdownProfileSettings" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
-										<img src="<?php bloginfo('stylesheet_directory'); ?>/images/icons/social/default_avatar.jpg" alt="edit address and update password" id="avatar-pic" class="avatar avatar-md m-1"></a>
-										<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfileSettings">
-										<a class="dropdown-item short-text" href="/registration/settings.php">My Account</a>
-										<div class="dropdown-divider header-menu"></div>
-										<a class="dropdown-item" href="/registration/settings.php">Profile</a>
-										<a class="dropdown-item" href="/registration/logout.php">Logout</a>
-										</div>
-									</li>
-								</ul>
+								<li class="nav-item dropdown ">
+								<a href="#" id="navbarDropdownProfileSettings" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
+								<img src="<?php bloginfo('stylesheet_directory'); ?>/images/icons/social/default_avatar.jpg" alt="edit address and update password" id="avatar-pic" class="avatar avatar-md m-1"></a>
+						<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfileSettings">
+								<a class="dropdown-item short-text" href="/registration/settings.php">My Account</a>
+							<div class="dropdown-divider header-menu">								
 							</div>
-						
+								<a class="dropdown-item" href="/registration/settings.php">Profile</a>
+								<a class="dropdown-item" href="/registration/logout.php">Logout</a>
+						</div>
+								</li>
+								</ul>
+					</div>
+				</div> <!-- moved this /div before the endif; -->
 							<?php
 							endif;
 							?>
-						</div> 
-						<!-- // avatarMenu -->
-					
-						<!-- END REGISTRATION -->
-						<?php wp_nav_menu(array('theme_location' => 'header-menu', 'after' => '<span> &#124;&nbsp;</span>', 'container' => '')); ?>
-						<span class="menu-toogle"><i class="fa fa-list"></i></span>
-				</div> <!-- //row -->	
-		</div><!--//container -->
-						<div id="navigation" class="new">
-							<div class="wp-container">
-								<?php wp_nav_menu('theme_location=main-menu&container='); ?>
-                            </div>
-    
-	</div> <!--//navbar -->		
-</div> <!--//header sticky -->	
+				<!-- // avatarMenu -->
+							<?php wp_nav_menu(array('theme_location' => 'header-menu', 'after' => '<span> &#124;&nbsp;</span>', 'container' => '')); ?>
+							<span class="menu-toogle"><i class="fa fa-list"></i></span>
+			</div>
+			 <!-- //container -->	
+		
+		</div> <!--//navbar-expand -->
+							
+			<div id="navigation" class="new">
+				<div class="wp-container">
+				<?php wp_nav_menu('theme_location=main-menu&container='); ?>
+				</div>
+			</div> 
+
+	</div> <!--//header sticky -->	
+<!-- </div> --> 	
 				
-<!-- FROM OLD -->
+
 
 
 
