@@ -65,7 +65,10 @@ svg.icon {
               <li class="mb-3 d-flex">
                 <img class="icon" src="<?php bloginfo('stylesheet_directory'); ?>/images/icons/theme/communication/mail.svg" alt="mail icon" data-inject-svg />
                 <div class="ml-3">
-                  <a href="mailto:info@gothamvolleyball.org">info@gothamvolleyball.org</a>
+                  <a href="mailto:info@gothamvolleyball.org">
+                    <div class="full-text">info@gothamvolleyball.org</div>
+                    <div class="short-text">@Info</div>
+                  </a>
                 </div>
               </li>
             </ul>
@@ -344,12 +347,6 @@ $(window).on("resize", function() {     
 });
 
 </script>
-
-
-
-
-
-
-
+<?php wp_footer(); ?>
 </body>
 </html>

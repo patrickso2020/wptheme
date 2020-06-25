@@ -90,6 +90,27 @@ enable_page_level_ads: true
 	flex-basis: auto;
 	justify-content: left;
 }
+.avatar {
+	flex-shrink: 0;
+	width: 3rem;
+	height: 3rem;
+	border-radius: 50%;
+	/* margin: 0rem .375rem; */
+}
+.dropdown-menu.show {
+	display: block;
+	text-align: center;
+	right: 0;
+}
+.navbar-collapse.col {
+	margin-right: -.925rem;
+}
+div.dropdown-menu.show {
+    position: absolute;
+    right: 0 !important;
+    left: auto !important;
+    text-align: center;
+}
 </style>
 </head>
 
@@ -118,13 +139,15 @@ enable_page_level_ads: true
 								<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
 								</li> -->
 								<?php
+								$_SESSION['authenticated'] = 'yes';  // forced authentication
 								if (isset($_SESSION['authenticated']) && ($_SESSION['authenticated'] == 'yes' || $_SESSION['authenticated'])) :
-								$nav = array('Dashboard' => 'personal.php', 'Scores' => 'scores.php',
-								'Friendlies' => 'friendly.php', 'Division' => 'historydivision.php',
-								'Admin' => 'admin.php', 'Tournament Admin'=>'tournament_admin/',
-								'Reports' => 'reports.php', 'Schedule' => 'schedule.php', 'Enter Scores' => 'admin_scores.php', 'Users' => 'admin-users.php',
-								'Team' => 'team1.php', 'Power'=>'powerclass1.php', 'Season' => 'season.php');
-								// $last = end($nav);
+								$nav = array('My Account' => 'personal.php');
+								// 'Scores' => 'scores.php',
+								// 'Friendlies' => 'friendly.php', 'Division' => 'historydivision.php',
+								// 'Admin' => 'admin.php', 'Tournament Admin'=>'tournament_admin/',
+								// 'Reports' => 'reports.php', 'Schedule' => 'schedule.php', 'Enter Scores' => 'admin_scores.php', 'Users' => 'admin-users.php',
+								// 'Team' => 'team1.php', 'Power'=>'powerclass1.php', 'Season' => 'season.php');
+								$last = end($nav);
 								$board_pages = array('Reports', 'Schedule', 'Enter Scores', 'Users', 'Tournament Admin');
 								$admin_pages = array('Team', 'Power',  'Admin', 'Season');
 								$history_dropdown_pages = array('Division', 'Power');
@@ -169,11 +192,7 @@ enable_page_level_ads: true
 								$active_class = ' active';
 								}
 								// print out the admin menu
-						echo '<li class="nav-item dropdown'.$active_class.'">
-									<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown-grid" aria-expanded="false" aria-haspopup="true">Admin Pages</a>
-							<div class="dropdown-menu row"><div class="col-auto" data-dropdown-content><div class="card card-sm card-body shadow-sm">';
-								echo $admin_menu_links;
-							echo '</div></div></div></li>';
+						
 
 								unset($nav);
 								unset($board_pages);
@@ -192,6 +211,7 @@ enable_page_level_ads: true
 								?>
 
 						</ul>
+						</div>
 					</div> <!--//collapse navbar  or wp-navbar-->
 				  </div> <!-- // flex-fill -->
 								<?php
@@ -202,7 +222,8 @@ enable_page_level_ads: true
 							<div class="d-flex align-items-center flex-wrap">
 								<ul class="navbar-nav">
 									<li class="nav-item dropdown ">
-										<a href="#" id="navbarDropdownProfileSettings" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true"><img src="/registration/images/default_avatar.jpg" alt="edit address and update password" id="avatar-pic" class="avatar avatar-md m-1"></a>
+										<a href="#" id="navbarDropdownProfileSettings" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
+										<img src="<?php bloginfo('stylesheet_directory'); ?>/images/icons/social/default_avatar.jpg" alt="edit address and update password" id="avatar-pic" class="avatar avatar-md m-1"></a>
 										<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfileSettings">
 										<a class="dropdown-item" href="/registration/settings.php">Profile</a>
 										<a class="dropdown-item" href="/registration/logout.php">Logout</a>
@@ -214,8 +235,8 @@ enable_page_level_ads: true
 							<?php
 							endif;
 							?>
-
-						</div> <!-- // avatarMenu -->
+						</div> 
+						<!-- // avatarMenu -->
 					
 						<!-- END REGISTRATION -->
 						<?php wp_nav_menu(array('theme_location' => 'header-menu', 'after' => '<span> &#124;&nbsp;</span>', 'container' => '')); ?>
