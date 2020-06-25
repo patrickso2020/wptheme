@@ -111,6 +111,7 @@ div.dropdown-menu.show {
     left: auto !important;
     text-align: center;
 }
+
 </style>
 </head>
 
@@ -139,7 +140,7 @@ div.dropdown-menu.show {
 								<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
 								</li> -->
 								<?php
-								$_SESSION['authenticated'] = 'yes';  // forced authentication
+								//$_SESSION['authenticated'] = 'yes';  // forced authentication
 								if (isset($_SESSION['authenticated']) && ($_SESSION['authenticated'] == 'yes' || $_SESSION['authenticated'])) :
 								$nav = array('My Account' => 'personal.php');
 								// 'Scores' => 'scores.php',
@@ -181,7 +182,7 @@ div.dropdown-menu.show {
 							</div>
 						</li>';
 								} else {
-						echo '<li class="nav-item'.$active_class.'"><a href="/registration/'.$page.'" class="nav-link">'.$title.'</a></li>';
+						echo '<li class="nav-item full-text'.$active_class.'"><a href="/registration/'.$page.'" class="nav-link">'.$title.'</a></li>';
 								}
 
 								$count++;
@@ -225,6 +226,8 @@ div.dropdown-menu.show {
 										<a href="#" id="navbarDropdownProfileSettings" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
 										<img src="<?php bloginfo('stylesheet_directory'); ?>/images/icons/social/default_avatar.jpg" alt="edit address and update password" id="avatar-pic" class="avatar avatar-md m-1"></a>
 										<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfileSettings">
+										<a class="dropdown-item short-text" href="/registration/settings.php">My Account</a>
+										<div class="dropdown-divider header-menu"></div>
 										<a class="dropdown-item" href="/registration/settings.php">Profile</a>
 										<a class="dropdown-item" href="/registration/logout.php">Logout</a>
 										</div>

@@ -928,6 +928,13 @@ input[type=submit].btn-block {
 	position: relative
 }
 
+.dropdown-divider {
+    height: 0;
+    margin: .5rem 0;
+    overflow: hidden;
+    border-top: 1px solid #e9ecef;
+}
+
 .dropdown-toggle {
 	white-space: nowrap
 }
@@ -4984,6 +4991,13 @@ body {
 .navbar-light .navbar-nav .active>.nav-link {
 	color: #ad0662
 }
+/* additional padding for new header (from registration) */
+div.shell {
+	padding-top: 35px;
+}
+.page-title {
+	padding: 15px 0px 35px 0px;
+}
 
 div.size32 {
 	flex: 0 0 32%;
@@ -5024,6 +5038,7 @@ div.date-row {
 	.container {
 		max-width: 540px
 	}
+	.dropdown-divider.header-menu { display: none; } 
 	.short-text { display: none; } 
 	.full-text { display: inline-block; font-size: 1rem; }
 }
