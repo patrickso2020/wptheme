@@ -12,7 +12,7 @@
 							<div class="img"><img src="<?php echo ecf_get_image_url(get_post_meta($post->ID, '_slide_image', true)) ?>" alt="" /></div>
                             
 
-							<div class="slide-cnt">
+							<div class="slide-cnt home-page">
                             <div class="shell">
                             							<h3><?php the_title(); ?></h3>
 								<?php the_content(''); ?>
