@@ -140,6 +140,7 @@ div.dropdown-menu.show {
 									<?php
 									//$_SESSION['authenticated'] = 'yes';  // forced authentication
 									if (isset($_SESSION['authenticated']) && ($_SESSION['authenticated'] == 'yes' || $_SESSION['authenticated'])) :
+									
 									$nav = array('My Account' => 'personal.php');
 									// 'Scores' => 'scores.php',
 									// 'Friendlies' => 'friendly.php', 'Division' => 'historydivision.php',

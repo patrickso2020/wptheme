@@ -346,6 +346,13 @@ $(window).on("resize", function() {     
   } 
 });
 
+// wpadmin bar pushes down main navbar
+$(window).on("load resize", function() {  
+  var wpheaderHeight = $("#wpadminbar").height(); 
+	var cssString = wpheaderHeight + 'px'; 
+	$("#navbar.header.sticky").css("padding-top", cssString); 
+});
+
 </script>
 <?php wp_footer(); ?>
 </body>
