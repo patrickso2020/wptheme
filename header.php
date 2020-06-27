@@ -196,8 +196,8 @@ div.dropdown-menu.show {
 								$active_class_signup = ' active';
 								$active_class_login = '';
 								}
-								echo '<li class="nav-item"><a href="/registration/login.php#login" class="nav-link ">Login</a></li>';
-								echo '<li class="nav-item"><a href="/registration/signup.php" class="nav-link">Sign Up</a></li>';
+								echo '<li class="nav-item"><a href="'.$registration_app_path.'/registration/login.php#login" class="nav-link ">Login</a></li>';
+								echo '<li class="nav-item"><a href="'.$registration_app_path.'/registration/signup.php" class="nav-link">Sign Up</a></li>';
 								// echo '<li class="nav-item"><a href="https://www.gothamvolleyball.org/about/" class="nav-link">About Us</a></li>';
 							endif;
 							?>
@@ -216,11 +216,12 @@ div.dropdown-menu.show {
 								<a href="#" id="navbarDropdownProfileSettings" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
 								<img src="<?php bloginfo('stylesheet_directory'); ?>/images/icons/social/default_avatar.jpg" alt="edit address and update password" id="avatar-pic" class="avatar navbar-avatar avatar-md m-1"></a>
 						<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfileSettings">
-								<a class="dropdown-item short-text" href="/registration/personal.php">My Account</a>
-							<div class="dropdown-divider header-menu">
-							</div>
-								<a class="dropdown-item" href="/registration/settings.php">Profile</a>
-								<a class="dropdown-item" href="/registration/logout.php">Logout</a>
+								
+						<a class="dropdown-item short-text" href="<?php echo $registration_app_path;?>/registration/personal.php">My Account</a>
+						<div class="dropdown-divider header-menu">
+						</div>
+						<a class="dropdown-item" href="<?php echo $registration_app_path;?>/registration/settings.php">Profile</a>
+						<a class="dropdown-item" href="<?php echo $registration_app_path;?>/registration/logout.php">Logout</a>	
 						</div>
 								</li>
 								</ul>
