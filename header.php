@@ -137,7 +137,7 @@ div.dropdown-menu.show {
 							if (isset($cookie_info->data->personid) && ($cookie_info->data->personid > 0) && isset($cookie_info->expiry) && (time() < $cookie_info->expiry)) {
 								$_SESSION['authenticated'] = 'yes';
 							}
-							$registration_app_path = '//my.gothamvolleyball.org/';
+							$registration_app_path = '//my.gothamvolleyball.org';
 							if (isset($_SESSION['authenticated']) && ($_SESSION['authenticated'] == 'yes' || $_SESSION['authenticated'])) :
 								$nav = array('My Account' => 'personal.php');
 								// 'Scores' => 'scores.php',
@@ -196,7 +196,7 @@ div.dropdown-menu.show {
 								$active_class_signup = ' active';
 								$active_class_login = '';
 								}
-								echo '<li class="nav-item"><a href="'.$registration_app_path.'/registration/login.php#login" class="nav-link ">Login</a></li>';
+								echo '<li class="nav-item"><a href="'.$registration_app_path.'/registration/login.php" class="nav-link ">Login</a></li>';
 								echo '<li class="nav-item"><a href="'.$registration_app_path.'/registration/signup.php" class="nav-link">Sign Up</a></li>';
 								// echo '<li class="nav-item"><a href="https://www.gothamvolleyball.org/about/" class="nav-link">About Us</a></li>';
 							endif;
