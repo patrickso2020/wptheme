@@ -5058,6 +5058,37 @@ div.date-row {
 	}
 } */
 
+/* navbar styling to behave consistent with registration site */
+@media (min-width: 768px) {
+	.navbar-avatar {
+		width: 3rem;
+		height: 3rem;
+	}
+}
+@media (max-width: 767.98px) {
+	.navbar-avatar {
+		width: 2.8rem;
+		height: 2.8rem;
+	}
+	.navbar-brand.logo-link {
+		padding-top: .29167rem;
+		padding-bottom: .29167rem;
+	}
+	.navbar.navbar-expand-lg.navbar-custom {
+		padding: .934rem 1.4rem;
+	}
+}
+@media (min-width: 1200px) {
+	.navbar-collapse.col {
+		margin-right: -.55rem;
+	}
+} 
+@media (max-width: 1199.98px) {
+	.navbar-collapse.col {
+		margin-right: -.925rem;
+	}
+}
+
 @media (min-width:576px) {
 	.container {
 		max-width: 540px
@@ -5080,6 +5111,12 @@ div.date-row {
 	.full-text { display: none; }
 }
 
+/* maintains wpadminbar fixed on mobile */
+@media screen and (max-width: 600px) {
+	#wpadminbar.nojq {
+		position: fixed !important;
+	}
+}
 @media (min-width:768px) {
 	.col-md {
 		flex-basis: 0;

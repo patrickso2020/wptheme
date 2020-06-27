@@ -65,7 +65,7 @@ enable_page_level_ads: true
 /* wp-navbar styling */
 @media (min-width: 300px) {
 	wp-navbar,
-	navbar-expand-lg .navbar-collapse { 
+	.navbar-expand-lg .navbar-collapse { 
 		display: flex; 
 		flex-basis: auto;
 	}
@@ -90,10 +90,8 @@ enable_page_level_ads: true
 	flex-basis: auto;
 	justify-content: left;
 }
-.avatar {
+.navbar-avatar {
 	flex-shrink: 0;
-	width: 3rem;
-	height: 3rem;
 	border-radius: 50%;
 	/* margin: 0rem .375rem; */
 }
@@ -102,9 +100,7 @@ enable_page_level_ads: true
 	text-align: center;
 	right: 0;
 }
-.navbar-collapse.col {
-	margin-right: -.925rem;
-}
+
 div.dropdown-menu.show {
     position: absolute;
     right: 0 !important;
@@ -220,7 +216,7 @@ div.dropdown-menu.show {
 								<ul class="navbar-nav">
 								<li class="nav-item dropdown ">
 								<a href="#" id="navbarDropdownProfileSettings" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
-								<img src="<?php bloginfo('stylesheet_directory'); ?>/images/icons/social/default_avatar.jpg" alt="edit address and update password" id="avatar-pic" class="avatar avatar-md m-1"></a>
+								<img src="<?php bloginfo('stylesheet_directory'); ?>/images/icons/social/default_avatar.jpg" alt="edit address and update password" id="avatar-pic" class="avatar navbar-avatar avatar-md m-1"></a>
 						<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfileSettings">
 								<a class="dropdown-item short-text" href="/registration/personal.php">My Account</a>
 							<div class="dropdown-divider header-menu">								
