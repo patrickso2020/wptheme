@@ -5078,8 +5078,6 @@ div.date-row {
 		padding: .934rem 1.4rem;
 	}
 }
-
-/* header styling to match Regsitration */
 @media (min-width: 1200px) {
 	.navbar-collapse.col {
 		/* margin-right: -.55rem; */
